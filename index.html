@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Targowords — AI-gestuurd platform voor het reserveren van beëdigde tolken</title>
+  <meta name="description" content="Targowords is een AI-gestuurd platform dat opdrachtgevers in heel Nederland koppelt aan beëdigde (RBTV-)tolken — on-site, telefonisch en via video, voor elke sector." />
+
+  <!-- META DOMEINVERIFICATIE: vervang de regel hieronder door de <meta>-tag uit Meta Business → Beveiliging → Domeinen. -->
+  <!-- <meta name="facebook-domain-verification" content="PLAK_HIER_DE_CODE" /> -->
+
+  <!-- Social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Targowords — beëdigde tolken reserveren, landelijk" />
+  <meta property="og:description" content="AI-gestuurd platform dat opdrachtgevers koppelt aan beëdigde (RBTV-)tolken in heel Nederland." />
+  <meta property="og:url" content="https://targowords.com" />
+  <meta property="og:image" content="https://targowords.com/assets/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="apple-touch-icon" href="/assets/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy: #223262;
+      --navy-deep: #1a2750;
+      --gold: #c2a878;
+      --gold-soft: #d8c39c;
+      --ink: #eaeefc;
+      --muted: #aab3d4;
+      --line: rgba(194, 168, 120, 0.22);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, Arial, sans-serif;
+      color: var(--ink);
+      background: radial-gradient(1200px 700px at 50% -10%, #2a3c72 0%, var(--navy) 45%, var(--navy-deep) 100%);
+      background-attachment: fixed;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 22px; }
+    h1, h2, h3, .brand { font-family: "Cinzel", Georgia, serif; letter-spacing: 0.02em; font-weight: 600; }
+
+    /* Hero */
+    .hero { text-align: center; padding: 64px 0 40px; }
+    .logo-glow { position: relative; display: inline-block; }
+    .logo-glow::before {
+      content: ""; position: absolute; inset: -18% ; border-radius: 50%;
+      background: radial-gradient(circle, rgba(194,168,120,0.28) 0%, rgba(194,168,120,0) 68%);
+      filter: blur(6px); z-index: 0;
+    }
+    .hero img.logo { position: relative; z-index: 1; width: min(78vw, 260px); height: auto; border-radius: 14px; }
+    .tagline { font-size: clamp(20px, 4.4vw, 30px); margin: 26px auto 10px; max-width: 720px; color: #fff; line-height: 1.35; }
+    .tagline .accent { color: var(--gold-soft); }
+    .sub { color: var(--muted); max-width: 600px; margin: 0 auto; font-size: 16px; }
+    .badge {
+      display: inline-block; margin-top: 22px; padding: 7px 16px; border: 1px solid var(--line);
+      border-radius: 999px; color: var(--gold-soft); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+
+    /* Sections */
+    section { padding: 30px 0; }
+    .card {
+      background: rgba(255,255,255,0.035); border: 1px solid var(--line); border-radius: 18px;
+      padding: 30px 28px; margin-top: 18px;
+    }
+    h2 { font-size: clamp(20px, 3.5vw, 26px); color: #fff; margin: 0 0 12px; }
+    p.lead { color: var(--ink); font-size: 17px; margin: 0; }
+    .eyebrow { color: var(--gold); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; margin: 0 0 6px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 18px; }
+    .pill {
+      border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; background: rgba(194,168,120,0.05);
+      color: var(--ink); font-size: 15px;
+    }
+    .pill b { color: var(--gold-soft); font-weight: 600; }
+
+    .modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 18px; }
+    .mode { border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+    .mode h3 { margin: 0 0 6px; color: var(--gold-soft); font-size: 18px; }
+    .mode p { margin: 0; color: var(--muted); font-size: 14.5px; }
+
+    /* Contact */
+    .contact a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+    .contact a:hover { color: var(--gold-soft); }
+    .contact .row { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 12px; font-size: 16px; }
+    .wa { color: var(--gold-soft) !important; }
+
+    footer { text-align: center; color: var(--muted); font-size: 13px; padding: 40px 0 50px; border-top: 1px solid var(--line); margin-top: 30px; }
+    footer .brand { color: var(--gold); letter-spacing: 0.14em; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+
+    <header class="hero">
+      <span class="logo-glow"><img class="logo" src="/assets/logo.png" alt="Targowords" /></span>
+      <p class="tagline">Beëdigde tolken reserveren — <span class="accent">landelijk, voor elke sector.</span></p>
+      <p class="sub">Een AI-gestuurd platform dat opdrachtgevers in heel Nederland in enkele stappen koppelt aan gekwalificeerde, beëdigde tolken.</p>
+      <span class="badge">In ontwikkeling · binnenkort live</span>
+    </header>
+
+    <section>
+      <div class="card">
+        <p class="eyebrow">Wat we bouwen</p>
+        <h2>Het juiste taalniveau, op het juiste moment</h2>
+        <p class="lead">
+          Targowords koppelt notarissen, rechtbanken, advocaten, gemeenten, zorginstellingen en
+          overheden aan beëdigde (RBTV-)tolken — on-site, telefonisch of via video. Slim matchen op taal,
+          specialisatie en beschikbaarheid, met transparante tarieven en gewaarborgde kwaliteit.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">Voor wie</p>
+      <h2>Sectoren die we bedienen</h2>
+      <div class="grid">
+        <div class="pill"><b>Notariaat</b></div>
+        <div class="pill"><b>Rechtbank &amp; advocatuur</b></div>
+        <div class="pill"><b>Zorg</b></div>
+        <div class="pill"><b>Gemeenten</b></div>
+        <div class="pill"><b>Asiel &amp; IND</b></div>
+        <div class="pill"><b>Ministeries</b></div>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">Hoe getolkt wordt</p>
+      <h2>Drie manieren, één platform</h2>
+      <div class="modes">
+        <div class="mode"><h3>On-site</h3><p>Een beëdigd tolk ter plaatse, bijvoorbeeld bij de notaris of in de rechtszaal.</p></div>
+        <div class="mode"><h3>Telefonisch</h3><p>Direct verbinding met een tolk voor korte en spoedeisende gesprekken.</p></div>
+        <div class="mode"><h3>Video</h3><p>Beeldbellen met een tolk, ideaal voor afstand en flexibiliteit.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card contact">
+        <p class="eyebrow">Contact</p>
+        <h2>Neem contact op</h2>
+        <p class="lead" style="color:var(--muted)">Vragen of samenwerken? We zijn bereikbaar via telefoon, WhatsApp en e-mail.</p>
+        <div class="row">
+          <span>📞 <a href="tel:+31610886180">+31 6 10886180</a> &nbsp;·&nbsp; <a class="wa" href="https://wa.me/31610886180">WhatsApp</a></span>
+          <span>📞 <a href="tel:+31642113440">+31 6 42113440</a> &nbsp;·&nbsp; <a class="wa" href="https://wa.me/31642113440">WhatsApp</a></span>
+        </div>
+        <div class="row">
+          <span>✉️ <a href="mailto:info@targowords.com">info@targowords.com</a></span>
+          <span>🌐 <a href="https://targowords.com">targowords.com</a></span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="brand">TARGOWORDS</div>
+      <p>Mede mogelijk gemaakt met financiering van ICM (Wyoming, VS).<br />
+      © <span id="y">2026</span> Targowords · targowords.com — alle rechten voorbehouden.</p>
+    </footer>
+
+  </main>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

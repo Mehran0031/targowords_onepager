@@ -9,7 +9,6 @@
   <!-- META DOMEINVERIFICATIE: vervang de regel hieronder door de <meta>-tag uit Meta Business → Beveiliging → Domeinen. -->
   <!-- <meta name="facebook-domain-verification" content="PLAK_HIER_DE_CODE" /> -->
 
-  <!-- Social preview -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Targowords — beëdigde tolken reserveren, landelijk" />
   <meta property="og:description" content="AI-gestuurd platform dat opdrachtgevers koppelt aan beëdigde (RBTV-)tolken in heel Nederland." />
@@ -21,149 +20,163 @@
   <link rel="apple-touch-icon" href="/assets/icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 
   <style>
+    /* Pegah marketing tokens (ported from the Targowords app: cream surface, navy+tan, Playfair+Roboto) */
     :root {
-      --navy: #223262;
-      --navy-deep: #1a2750;
-      --gold: #c2a878;
-      --gold-soft: #d8c39c;
-      --ink: #eaeefc;
-      --muted: #aab3d4;
-      --line: rgba(194, 168, 120, 0.22);
+      --surface: 36 14% 96%;
+      --surface-2: 0 0% 100%;
+      --surface-3: 36 14% 91%;
+      --ink: 30 8% 14%;
+      --ink-2: 30 6% 28%;
+      --ink-muted: 30 4% 42%;
+      --border: 30 6% 14% / 0.1;
+      --border-strong: 30 6% 14% / 0.18;
+      --primary: 224 50% 26%;        /* #223262 navy */
+      --on-primary: 0 0% 100%;
+      --secondary: 32 41% 64%;       /* #C6A581 tan */
+      --tertiary: 32 41% 84%;
+      --rad-md: 12px; --rad-lg: 16px; --rad-xl: 24px;
+      --serif: "Playfair Display", Georgia, serif;
+      --font: "Roboto", system-ui, -apple-system, sans-serif;
+      --container: 1080px;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
-      margin: 0;
-      font-family: "Inter", system-ui, -apple-system, Arial, sans-serif;
-      color: var(--ink);
-      background: radial-gradient(1200px 700px at 50% -10%, #2a3c72 0%, var(--navy) 45%, var(--navy-deep) 100%);
-      background-attachment: fixed;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+      margin: 0; background: hsl(var(--surface)); color: hsl(var(--ink));
+      font-family: var(--font); line-height: 1.6; -webkit-font-smoothing: antialiased;
     }
-    .wrap { max-width: 980px; margin: 0 auto; padding: 0 22px; }
-    h1, h2, h3, .brand { font-family: "Cinzel", Georgia, serif; letter-spacing: 0.02em; font-weight: 600; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+    @media (max-width: 760px) { .container { padding: 0 20px; } }
+    .section { padding: 84px 0; }
+    @media (max-width: 760px) { .section { padding: 56px 0; } }
+    .section--alt { background: hsl(var(--surface-2)); }
+    .section--tinted { background: hsl(var(--tertiary) / 0.25); }
 
-    /* Hero */
-    .hero { text-align: center; padding: 64px 0 40px; }
-    .logo-glow { position: relative; display: inline-block; }
-    .logo-glow::before {
-      content: ""; position: absolute; inset: -18% ; border-radius: 50%;
-      background: radial-gradient(circle, rgba(194,168,120,0.28) 0%, rgba(194,168,120,0) 68%);
-      filter: blur(6px); z-index: 0;
-    }
-    .hero img.logo { position: relative; z-index: 1; width: min(78vw, 260px); height: auto; border-radius: 14px; }
-    .tagline { font-size: clamp(20px, 4.4vw, 30px); margin: 26px auto 10px; max-width: 720px; color: #fff; line-height: 1.35; }
-    .tagline .accent { color: var(--gold-soft); }
-    .sub { color: var(--muted); max-width: 600px; margin: 0 auto; font-size: 16px; }
-    .badge {
-      display: inline-block; margin-top: 22px; padding: 7px 16px; border: 1px solid var(--line);
-      border-radius: 999px; color: var(--gold-soft); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
-    }
+    .eyebrow { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: hsl(var(--ink-muted)); margin: 0 0 14px; }
+    .display { font-family: var(--serif); font-weight: 700; letter-spacing: -0.015em; line-height: 1.08; font-size: clamp(34px, 5vw, 56px); margin: 0; }
+    .display-md { font-family: var(--serif); font-weight: 600; letter-spacing: -0.01em; line-height: 1.12; font-size: clamp(28px, 3.6vw, 42px); margin: 0; }
+    .headline { font-size: clamp(21px, 2vw, 26px); font-weight: 600; line-height: 1.25; margin: 0; }
+    .body-lg { font-size: 18px; line-height: 1.6; margin: 0; color: hsl(var(--ink-2)); }
+    .body { font-size: 15.5px; line-height: 1.6; color: hsl(var(--ink-muted)); }
+    .accent { color: hsl(var(--secondary)); }
 
-    /* Sections */
-    section { padding: 30px 0; }
-    .card {
-      background: rgba(255,255,255,0.035); border: 1px solid var(--line); border-radius: 18px;
-      padding: 30px 28px; margin-top: 18px;
-    }
-    h2 { font-size: clamp(20px, 3.5vw, 26px); color: #fff; margin: 0 0 12px; }
-    p.lead { color: var(--ink); font-size: 17px; margin: 0; }
-    .eyebrow { color: var(--gold); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; margin: 0 0 6px; }
+    .chip { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 14px; border-radius: var(--rad-xl); font-size: 13px; font-weight: 500; background: hsl(var(--tertiary) / 0.35); color: hsl(var(--ink-2)); }
 
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 18px; }
-    .pill {
-      border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; background: rgba(194,168,120,0.05);
-      color: var(--ink); font-size: 15px;
-    }
-    .pill b { color: var(--gold-soft); font-weight: 600; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font); font-size: 15px; font-weight: 500; padding: 0 26px; height: 50px; border-radius: var(--rad-md); border: 1px solid transparent; cursor: pointer; transition: all .18s ease; }
+    .btn--primary { background: hsl(var(--primary)); color: hsl(var(--on-primary)); }
+    .btn--primary:hover { filter: brightness(1.1); transform: translateY(-1px); box-shadow: 0 8px 22px hsl(var(--primary) / .25); }
+    .btn--white { background: #fff; color: hsl(var(--primary)); }
+    .btn--white:hover { transform: translateY(-1px); box-shadow: 0 8px 20px hsl(0 0% 0% / .18); }
+    .btn--ghost-light { background: transparent; color: #fff; border-color: hsl(0 0% 100% / .35); }
+    .btn--ghost-light:hover { background: hsl(0 0% 100% / .08); }
 
-    .modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 18px; }
-    .mode { border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
-    .mode h3 { margin: 0 0 6px; color: var(--gold-soft); font-size: 18px; }
-    .mode p { margin: 0; color: var(--muted); font-size: 14.5px; }
+    .card { background: hsl(var(--surface-2)); border: 1px solid hsl(var(--border)); border-radius: var(--rad-lg); padding: 28px; transition: all .18s ease; }
+    .card:hover { border-color: hsl(var(--border-strong)); transform: translateY(-2px); box-shadow: 0 12px 32px hsl(0 0% 0% / .06); }
 
-    /* Contact */
-    .contact a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
-    .contact a:hover { color: var(--gold-soft); }
-    .contact .row { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 12px; font-size: 16px; }
-    .wa { color: var(--gold-soft) !important; }
+    /* hero (navy band — the brand logo lives on navy) */
+    .hero { background: hsl(var(--primary)); color: #fff; text-align: center; padding: 72px 0 80px; position: relative; overflow: hidden; }
+    .hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(900px 380px at 50% -8%, hsl(32 41% 64% / .16), transparent 70%); pointer-events: none; }
+    .hero .container { position: relative; z-index: 1; }
+    .hero img.logo { width: min(70vw, 220px); height: auto; border-radius: 16px; margin-bottom: 26px; }
+    .hero .display { color: #fff; max-width: 760px; margin: 0 auto; }
+    .hero .body-lg { color: hsl(0 0% 100% / .82); max-width: 620px; margin: 18px auto 0; }
+    .hero .chip { background: hsl(0 0% 100% / .12); color: #fff; margin-bottom: 26px; }
+    .hero .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
 
-    footer { text-align: center; color: var(--muted); font-size: 13px; padding: 40px 0 50px; border-top: 1px solid var(--line); margin-top: 30px; }
-    footer .brand { color: var(--gold); letter-spacing: 0.14em; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 22px; }
+    .modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-top: 26px; }
+    .mode h3 { font-family: var(--serif); font-weight: 600; font-size: 21px; margin: 0 0 8px; color: hsl(var(--primary)); }
+    .mode p { margin: 0; }
+
+    .contact-rows { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; font-size: 16px; color: hsl(var(--ink-2)); }
+    .contact-rows a { border-bottom: 1px solid hsl(var(--border-strong)); }
+    .contact-rows a:hover { color: hsl(var(--primary)); }
+    .lead-narrow { max-width: 680px; }
+
+    footer { background: hsl(var(--primary)); color: hsl(0 0% 100% / .72); text-align: center; padding: 44px 0; font-size: 13.5px; }
+    footer .brand { font-family: var(--serif); font-weight: 600; letter-spacing: .12em; color: hsl(var(--secondary)); font-size: 18px; margin-bottom: 10px; }
   </style>
 </head>
 <body>
-  <main class="wrap">
 
-    <header class="hero">
-      <span class="logo-glow"><img class="logo" src="/assets/logo.png" alt="Targowords" /></span>
-      <p class="tagline">Beëdigde tolken reserveren — <span class="accent">landelijk, voor elke sector.</span></p>
-      <p class="sub">Een AI-gestuurd platform dat opdrachtgevers in heel Nederland in enkele stappen koppelt aan gekwalificeerde, beëdigde tolken.</p>
-      <span class="badge">In ontwikkeling · binnenkort live</span>
-    </header>
-
-    <section>
-      <div class="card">
-        <p class="eyebrow">Wat we bouwen</p>
-        <h2>Het juiste taalniveau, op het juiste moment</h2>
-        <p class="lead">
-          Targowords koppelt notarissen, rechtbanken, advocaten, gemeenten, zorginstellingen en
-          overheden aan beëdigde (RBTV-)tolken — on-site, telefonisch of via video. Slim matchen op taal,
-          specialisatie en beschikbaarheid, met transparante tarieven en gewaarborgde kwaliteit.
-        </p>
+  <header class="hero">
+    <div class="container">
+      <img class="logo" src="/assets/logo.png" alt="Targowords" />
+      <div><span class="chip">In ontwikkeling · binnenkort live</span></div>
+      <h1 class="display">Beëdigde tolken reserveren,<br /><span class="accent">landelijk — voor elke sector.</span></h1>
+      <p class="body-lg">Een AI-gestuurd platform dat opdrachtgevers in heel Nederland in enkele stappen koppelt aan gekwalificeerde, beëdigde tolken.</p>
+      <div class="cta">
+        <a class="btn btn--white" href="#contact">Neem contact op</a>
+        <a class="btn btn--ghost-light" href="https://wa.me/31610886180">WhatsApp</a>
       </div>
-    </section>
+    </div>
+  </header>
 
-    <section>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Wat we bouwen</p>
+      <h2 class="display-md lead-narrow">Het juiste taalniveau, op het juiste moment</h2>
+      <p class="body-lg lead-narrow" style="margin-top:16px">
+        Targowords koppelt notarissen, rechtbanken, advocaten, gemeenten, zorginstellingen en
+        overheden aan beëdigde (RBTV-)tolken — on-site, telefonisch of via video. Slim matchen op
+        taal, specialisatie en beschikbaarheid, met transparante tarieven en gewaarborgde kwaliteit.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
       <p class="eyebrow">Voor wie</p>
-      <h2>Sectoren die we bedienen</h2>
+      <h2 class="display-md">Sectoren die we bedienen</h2>
       <div class="grid">
-        <div class="pill"><b>Notariaat</b></div>
-        <div class="pill"><b>Rechtbank &amp; advocatuur</b></div>
-        <div class="pill"><b>Zorg</b></div>
-        <div class="pill"><b>Gemeenten</b></div>
-        <div class="pill"><b>Asiel &amp; IND</b></div>
-        <div class="pill"><b>Ministeries</b></div>
+        <span class="chip">Notariaat</span>
+        <span class="chip">Rechtbank &amp; advocatuur</span>
+        <span class="chip">Zorg</span>
+        <span class="chip">Gemeenten</span>
+        <span class="chip">Asiel &amp; IND</span>
+        <span class="chip">Ministeries</span>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
+  <section class="section">
+    <div class="container">
       <p class="eyebrow">Hoe getolkt wordt</p>
-      <h2>Drie manieren, één platform</h2>
+      <h2 class="display-md">Drie manieren, één platform</h2>
       <div class="modes">
-        <div class="mode"><h3>On-site</h3><p>Een beëdigd tolk ter plaatse, bijvoorbeeld bij de notaris of in de rechtszaal.</p></div>
-        <div class="mode"><h3>Telefonisch</h3><p>Direct verbinding met een tolk voor korte en spoedeisende gesprekken.</p></div>
-        <div class="mode"><h3>Video</h3><p>Beeldbellen met een tolk, ideaal voor afstand en flexibiliteit.</p></div>
+        <div class="card mode"><h3>On-site</h3><p class="body">Een beëdigd tolk ter plaatse, bijvoorbeeld bij de notaris of in de rechtszaal.</p></div>
+        <div class="card mode"><h3>Telefonisch</h3><p class="body">Direct verbinding met een tolk voor korte en spoedeisende gesprekken.</p></div>
+        <div class="card mode"><h3>Video</h3><p class="body">Beeldbellen met een tolk — ideaal voor afstand en flexibiliteit.</p></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <div class="card contact">
-        <p class="eyebrow">Contact</p>
-        <h2>Neem contact op</h2>
-        <p class="lead" style="color:var(--muted)">Vragen of samenwerken? We zijn bereikbaar via telefoon, WhatsApp en e-mail.</p>
-        <div class="row">
-          <span>📞 <a href="tel:+31610886180">+31 6 10886180</a> &nbsp;·&nbsp; <a class="wa" href="https://wa.me/31610886180">WhatsApp</a></span>
-          <span>📞 <a href="tel:+31642113440">+31 6 42113440</a> &nbsp;·&nbsp; <a class="wa" href="https://wa.me/31642113440">WhatsApp</a></span>
-        </div>
-        <div class="row">
-          <span>✉️ <a href="mailto:info@targowords.com">info@targowords.com</a></span>
-          <span>🌐 <a href="https://targowords.com">targowords.com</a></span>
-        </div>
+  <section class="section section--tinted" id="contact">
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <h2 class="display-md">Neem contact op</h2>
+      <p class="body-lg lead-narrow" style="margin-top:14px">Vragen of samenwerken? We zijn bereikbaar via telefoon, WhatsApp en e-mail.</p>
+      <div class="contact-rows">
+        <span>📞 <a href="tel:+31610886180">+31 6 10886180</a> &nbsp;·&nbsp; <a href="https://wa.me/31610886180">WhatsApp</a></span>
+        <span>📞 <a href="tel:+31642113440">+31 6 42113440</a> &nbsp;·&nbsp; <a href="https://wa.me/31642113440">WhatsApp</a></span>
+        <span>✉️ <a href="mailto:info@targowords.com">info@targowords.com</a></span>
+        <span>🌐 <a href="https://targowords.com">targowords.com</a></span>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
+  <footer>
+    <div class="container">
       <div class="brand">TARGOWORDS</div>
       <p>Mede mogelijk gemaakt met financiering van ICM (Wyoming, VS).<br />
       © <span id="y">2026</span> Targowords · targowords.com — alle rechten voorbehouden.</p>
-    </footer>
+    </div>
+  </footer>
 
-  </main>
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
